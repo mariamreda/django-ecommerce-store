@@ -1,0 +1,44 @@
+[
+    {
+        "model": "store.Category",
+        "pk": 1,
+        "fields": {
+            "name": "Electronics"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 2,
+        "fields": {
+            "name": "Clothing"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 3,
+        "fields": {
+            "name": "Home Appliances"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 4,
+        "fields": {
+            "name": "Toys"
+        }
+    },
+    {
+        "model": "store.Category",
+        "pk": 5,
+        "fields": {
+            "name": "Books"
+        }
+    },
+    {
+        "model": "store.category",
+        "pk": 6,
+        "fields": {
+            "name": "Groceries"
+        }
+    }
+]

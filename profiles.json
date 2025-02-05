@@ -1,0 +1,142 @@
+[
+    {
+        "model": "store.Profile",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "phone": "0100012345",
+            "address1": "123 Main St",
+            "address2": "Apt 101",
+            "city": "Cairo",
+            "state": "Cairo",
+            "zipcode": "12345",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "phone": "0100012346",
+            "address1": "456 Elm St",
+            "address2": "Apt 202",
+            "city": "Alexandria",
+            "state": "Alexandria",
+            "zipcode": "23456",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "phone": "0100012347",
+            "address1": "789 Oak St",
+            "address2": "Apt 303",
+            "city": "Giza",
+            "state": "Giza",
+            "zipcode": "34567",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 4,
+        "fields": {
+            "user": 4,
+            "phone": "0100012348",
+            "address1": "321 Pine St",
+            "address2": "Apt 404",
+            "city": "Sharm El-Sheikh",
+            "state": "South Sinai",
+            "zipcode": "45678",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 5,
+        "fields": {
+            "user": 5,
+            "phone": "0100012349",
+            "address1": "654 Cedar St",
+            "address2": "Apt 505",
+            "city": "Luxor",
+            "state": "Luxor",
+            "zipcode": "56789",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 6,
+        "fields": {
+            "user": 6,
+            "phone": "0100012350",
+            "address1": "987 Maple St",
+            "address2": "Apt 606",
+            "city": "Aswan",
+            "state": "Aswan",
+            "zipcode": "67890",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 7,
+        "fields": {
+            "user": 7,
+            "phone": "0100012351",
+            "address1": "123 Cherry St",
+            "address2": "Apt 707",
+            "city": "Mansoura",
+            "state": "Dakahlia",
+            "zipcode": "78901",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 8,
+        "fields": {
+            "user": 8,
+            "phone": "0100012352",
+            "address1": "456 Birch St",
+            "address2": "Apt 808",
+            "city": "Tanta",
+            "state": "Gharbia",
+            "zipcode": "89012",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 9,
+        "fields": {
+            "user": 9,
+            "phone": "0100012353",
+            "address1": "789 Walnut St",
+            "address2": "Apt 909",
+            "city": "Damanhur",
+            "state": "Beheira",
+            "zipcode": "90123",
+            "country": "Egypt"
+        }
+    },
+    {
+        "model": "store.Profile",
+        "pk": 10,
+        "fields": {
+            "user": 10,
+            "phone": "0100012354",
+            "address1": "321 Pine St",
+            "address2": "Apt 1010",
+            "city": "Cairo",
+            "state": "Cairo",
+            "zipcode": "12345",
+            "country": "Egypt"
+        }
+    }
+]

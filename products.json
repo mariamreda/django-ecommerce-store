@@ -1,0 +1,262 @@
+[
+    {
+        "model": "store.Product",
+        "pk": 1,
+        "fields": {
+            "name": "Laptop",
+            "price": 5000.00,
+            "category": 1,
+            "description": "A high-performance laptop.",
+            "image": "uploads/Product/laptop.jpg",
+            "is_sale": true,
+            "sale_price": 4500.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 2,
+        "fields": {
+            "name": "Smartphone",
+            "price": 3000.00,
+            "category": 1,
+            "description": "A latest model smartphone.",
+            "image": "uploads/Product/martphone.jpsg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 3,
+        "fields": {
+            "name": "T-shirt",
+            "price": 150.00,
+            "category": 2,
+            "description": "Comfortable cotton T-shirt.",
+            "image": "uploads/Product/tshirt.jpg",
+            "is_sale": true,
+            "sale_price": 120.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 4,
+        "fields": {
+            "name": "Microwave",
+            "price": 800.00,
+            "category": 3,
+            "description": "A quick heating microwave.",
+            "image": "uploads/Product/microwave.jpg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 5,
+        "fields": {
+            "name": "Doll",
+            "price": 100.00,
+            "category": 4,
+            "description": "Soft plush doll for kids.",
+            "image": "uploads/Product/doll.jpg",
+            "is_sale": true,
+            "sale_price": 80.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 6,
+        "fields": {
+            "name": "Cookbook",
+            "price": 50.00,
+            "category": 5,
+            "description": "A collection of delicious recipes.",
+            "image": "uploads/Product/cookbook.jpg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 7,
+        "fields": {
+            "name": "Cereal",
+            "price": 30.00,
+            "category": 6,
+            "description": "Healthy breakfast cereal.",
+            "image": "uploads/Product/cereal.jpg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 8,
+        "fields": {
+            "name": "Blender",
+            "price": 250.00,
+            "category": 3,
+            "description": "A high-speed blender for smoothies.",
+            "image": "uploads/Product/blender.jpg",
+            "is_sale": true,
+            "sale_price": 200.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 9,
+        "fields": {
+            "name": "Running Shoes",
+            "price": 450.00,
+            "category": 2,
+            "description": "Comfortable running shoes for athletes.",
+            "image": "uploads/Product/shoes.jpg",
+            "is_sale": true,
+            "sale_price": 400.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 10,
+        "fields": {
+            "name": "Gaming Console",
+            "price": 4000.00,
+            "category": 1,
+            "description": "Next-gen gaming console.",
+            "image": "uploads/Product/console.jpg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 11,
+        "fields": {
+            "name": "Headphones",
+            "price": 300.00,
+            "category": 1,
+            "description": "Wireless noise-canceling headphones.",
+            "image": "uploads/Product/headphones.jpg",
+            "is_sale": true,
+            "sale_price": 250.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 12,
+        "fields": {
+            "name": "Table Lamp",
+            "price": 150.00,
+            "category": 3,
+            "description": "Modern design table lamp.",
+            "image": "uploads/Product/lamp.jpg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 13,
+        "fields": {
+            "name": "Bluetooth Speaker",
+            "price": 400.00,
+            "category": 1,
+            "description": "Portable Bluetooth speaker with great sound.",
+            "image": "uploads/Product/speaker.jpg",
+            "is_sale": true,
+            "sale_price": 350.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 14,
+        "fields": {
+            "name": "Electric Kettle",
+            "price": 200.00,
+            "category": 3,
+            "description": "Fast boiling electric kettle.",
+            "image": "uploads/Product/kettle.jpg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 15,
+        "fields": {
+            "name": "Watch",
+            "price": 1200.00,
+            "category": 2,
+            "description": "Luxury brand wristwatch.",
+            "image": "uploads/Product/watch.jpg",
+            "is_sale": true,
+            "sale_price": 1000.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 16,
+        "fields": {
+            "name": "Tablet",
+            "price": 3500.00,
+            "category": 1,
+            "description": "High-performance tablet for work and play.",
+            "image": "uploads/Product/tablet.jpg",
+            "is_sale": true,
+            "sale_price": 3000.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 17,
+        "fields": {
+            "name": "Jacket",
+            "price": 500.00,
+            "category": 2,
+            "description": "Warm winter jacket.",
+            "image": "uploads/Product/jacket.jpg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 18,
+        "fields": {
+            "name": "Coffee Maker",
+            "price": 350.00,
+            "category": 3,
+            "description": "Automatic coffee machine.",
+            "image": "uploads/Product/coffee_maker.jpg",
+            "is_sale": true,
+            "sale_price": 300.00
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 19,
+        "fields": {
+            "name": "Chairs Set",
+            "price": 1200.00,
+            "category": 3,
+            "description": "Set of 4 modern chairs for dining.",
+            "image": "uploads/Product/chairs.jpg",
+            "is_sale": false,
+            "sale_price": 0
+        }
+    },
+    {
+        "model": "store.Product",
+        "pk": 20,
+        "fields": {
+            "name": "Toaster",
+            "price": 200.00,
+            "category": 3,
+            "description": "A quick breakfast toaster.",
+            "image": "uploads/Product/toaster.jpg",
+            "is_sale": true,
+            "sale_price": 150.00
+        }
+    }
+]

@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+<div class="container mt-4">
+    <h2 class="text-center">Orders Insights</h2>
+<br/>
+<br/>
+
+<div class="box" style="background-color: #ff4081; color: white; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center;">
+   Total Number Of Orders:  {{total_orders}}
+</div>
+
+    <div class="row mt-4">
+        <!-- Pie Chart -->
+        <div class="col-md-5">
+            <div class="card p-3 shadow">
+                <h5 class="text-center">Orders per Category</h5>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Line Chart -->
+        <div class="col-md-7">
+            <div class="card p-3 shadow">
+                <h5 class="text-center">Number of Orders per Day</h5>
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script type="text/javascript">
+    const labelsLine = {{ days_strings|safe }}; 
+    const dataValuesLine = {{ orders_num|safe }}; 
+
+    const labelsPie = {{ category|safe }};
+    const dataValuesPie = {{ quantitySoldPerCategory|safe }};
+   
+    // Pie Chart
+    const ctxPie = document.getElementById('pieChart').getContext('2d');
+    new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+            labels: labelsPie,
+            datasets: [{
+                data: dataValuesPie,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(54, 162, 235, 0.7)',
+                    'rgba(255, 206, 86, 0.7)',
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(153, 102, 255, 0.7)',
+                    'rgba(255, 159, 64, 0.7)'
+                ],
+                borderColor: '#fff',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    // Line Chart
+    const ctxLine = document.getElementById('lineChart').getContext('2d');
+    new Chart(ctxLine, {
+        type: 'line',
+        data: {
+            labels: labelsLine,
+            datasets: [{
+                label: 'Sales Trend',
+                data: dataValuesLine,
+                borderColor: 'rgba(255, 99, 132, 1)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderWidth: 2,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+</script>
+
+{% endblock %}

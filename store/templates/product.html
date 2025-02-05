@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container">
+    <br/>
+
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="{{ product.name }}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+
+                    {% if product.is_sale %}
+                        <div class="text-danger">
+                            <strike>${{ product.price }}</strike> <span class="fw-bold">${{ product.sale_price }}</span>
+                        </div>
+                    {% else %}
+                        <p class="fw-bold">${{ product.price }}</p>
+                    {% endif %}
+
+                    <div class="row justify-content-center my-3">
+                        <label for="qty-cart" class="col-md-2 col-form-label">Quantity:</label>
+                        <div class="col-md-2">
+                            <select class="form-select" id="qty-cart">
+                                {% for i in "12345" %}
+                                    <option value="{{ i }}">{{ i }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+                    <button type="button" value="{{ product.id }}" class="btn btn-primary" id="add-cart">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Form -->
+    {% if request.user.is_authenticated and make_review %}
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Add a Review</h5>
+                <form id="commentForm" method="POST" action="{% url 'ajax_add_review' product.id %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="review" class="form-label">Your Review</label>
+                        <textarea class="form-control" name="review" id="review" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rating" class="form-label">Rating</label>
+                        <select class="form-select" name="rating" id="rating" required>
+                            <option value="1">1 Star</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5">5 Stars</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+                <div id="review-res" class="text-success mt-2"></div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Display Customer Reviews -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Customer Reviews</h5>
+            <div class="comment-list">
+                {% for review in reviews %}
+                    <div class="single-comment d-flex mb-3">
+                        <div class="thumb text-center">
+                            <img src="https://www.gravatar.com/avatar/?d=mp" width="50" class="rounded-circle">
+                            <p class="font-heading text-brand">{{ review.user.username }}</p>
+                        </div>
+                        <div class="desc ms-3">
+                            <span class="text-muted font-xs">{{ review.date|date:"d M, Y" }}</span>
+                            <p class="mb-1">{{ review.review }}</p>
+                            <div class="text-warning">
+                                {% for _ in "x"|rjust:review.rating %}
+                                    <i class="fas fa-star"></i>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <p class="text-muted">No reviews yet. Be the first to leave a review!</p>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).on('click', '#add-cart', function(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: '{% url "cart_add" %}',
+        data: {
+            product_id: $('#add-cart').val(),
+            product_qty: $('#qty-cart option:selected').text(),
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            action: 'post'
+        },
+        success: function(json){
+            document.getElementById("cart_quantity").textContent = json.qty;
+            location.reload();
+        }
+    });
+});
+
+$(document).ready(function(){
+    $("#commentForm").submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            data: $(this).serialize(),
+            method: $(this).attr("method"),
+            url: $(this).attr("action"),
+            dataType: "json", 
+            success: function(res){
+                if(res.bool === true){
+                    $("#review-res").html("Review added successfully.");
+                    $("#commentForm").hide();
+
+                    let _html = `
+                        <div class="single-comment d-flex mb-3">
+                            <div class="thumb text-center">
+                                <img src="https://www.gravatar.com/avatar/?d=mp" width="50" class="rounded-circle">
+                                <p class="font-heading text-brand">${res.context.user}</p>
+                            </div>
+                            <div class="desc ms-3">
+                                <span class="text-muted font-xs">${res.context.date}</span>
+                                <p class="mb-1">${res.context.review}</p>
+                                <div class="text-warning">`;
+                    
+                    for(let i=1; i <= res.context.rating; i++){
+                        _html += '<i class="fas fa-star"></i>';
+                    }
+
+                    _html += `
+                                </div>
+                            </div>
+                        </div>`;
+
+                    $(".comment-list").prepend(_html);
+                }
+            }
+        });
+    });
+});
+</script>
+
+{% endblock %}

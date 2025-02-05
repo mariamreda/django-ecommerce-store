@@ -1,0 +1,162 @@
+[
+    {
+        "model": "auth.User",
+        "pk": 1,
+        "fields": {
+            "username": "ahmed1",
+            "password": "testing321",
+            "email": "ahmed1@example.com",
+            "first_name": "Ahmed",
+            "last_name": "Ali",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 2,
+        "fields": {
+            "username": "mariam2",
+            "password": "testing321",
+            "email": "mariam2@example.com",
+            "first_name": "Mariam",
+            "last_name": "Reda",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 3,
+        "fields": {
+            "username": "sarah3",
+            "password": "testing321",
+            "email": "sarah3@example.com",
+            "first_name": "Sarah",
+            "last_name": "Hassan",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 4,
+        "fields": {
+            "username": "khaled4",
+            "password": "testing321",
+            "email": "khaled4@example.com",
+            "first_name": "Khaled",
+            "last_name": "Mohamed",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 5,
+        "fields": {
+            "username": "rania5",
+            "password": "testing321",
+            "email": "rania5@example.com",
+            "first_name": "Rania",
+            "last_name": "Samir",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 6,
+        "fields": {
+            "username": "yasser6",
+            "password": "testing321",
+            "email": "yasser6@example.com",
+            "first_name": "Yasser",
+            "last_name": "Nasser",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 7,
+        "fields": {
+            "username": "tamer7",
+            "password": "testing321",
+            "email": "tamer7@example.com",
+            "first_name": "Tamer",
+            "last_name": "Sayed",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 8,
+        "fields": {
+            "username": "mona8",
+            "password": "testing321",
+            "email": "mona8@example.com",
+            "first_name": "Mona",
+            "last_name": "Hassan",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 9,
+        "fields": {
+            "username": "omar9",
+            "password": "testing321",
+            "email": "omar9@example.com",
+            "first_name": "Omar",
+            "last_name": "Tarek",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 10,
+        "fields": {
+            "username": "laila10",
+            "password": "testing321",
+            "email": "laila10@example.com",
+            "first_name": "Laila",
+            "last_name": "Sherif",
+            "is_staff": false,
+            "is_active": true,
+            "is_superuser": false,
+            "last_login": "2025-01-01T00:00:00Z",
+            "date_joined": "2025-01-01T00:00:00Z"
+        }
+    }
+]
